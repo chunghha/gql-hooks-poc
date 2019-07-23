@@ -132,7 +132,13 @@ export type ByNameQuery = { __typename?: "Query" } & {
       Maybe<
         { __typename?: "Country" } & Pick<
           Country,
-          "name" | "capital" | "cioc" | "population" | "flag" | "timezones"
+          | "name"
+          | "capital"
+          | "cioc"
+          | "flag"
+          | "population"
+          | "subregion"
+          | "timezones"
         >
       >
     >
@@ -197,8 +203,9 @@ export const ByNameDocument = gql`
       name
       capital
       cioc
-      population
       flag
+      population
+      subregion
       timezones
     }
   }

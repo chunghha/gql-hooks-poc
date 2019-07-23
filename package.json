@@ -43,6 +43,7 @@
     "@graphql-codegen/cli": "^1.4.0",
     "@graphql-codegen/typescript": "1.4.0",
     "@graphql-codegen/typescript-operations": "1.4.0",
-    "@graphql-codegen/typescript-react-apollo": "1.4.0"
+    "@graphql-codegen/typescript-react-apollo": "1.4.0",
+    "typeface-ibm-plex-sans": "^0.0.75"
   }
 }

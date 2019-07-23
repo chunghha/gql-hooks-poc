@@ -17,14 +17,18 @@ const CountryProfile: React.FC<Props> = ({ data }) => {
     <div className={className}>
       <div className={`${className}__status`}>
         {data.byName.map(
-          (country) => !!country && (
-            <div>
-              <div>{country.name}</div>
+          (country, i) => !!country && !!country.flag && (
+            <div key={i}>
+              <div className={`${className}__country`}>{country.name}</div>
               <div>{country.capital}</div>
+              <div>{country.subregion}</div>
               <div>{country.cioc}</div>
+              <div>{!!country.population ? country.population.toLocaleString(): ''}</div>
+              <div>{!!country.timezones ? country.timezones.join(', ') : ''}</div>
               <div>{country.flag}</div>
-              <div>{country.population}</div>
-              <div>{country.timezones}</div>
+              <div className={`${className}__flag`}>
+                <img src={country.flag} width='600px' height='400px' />
+              </div>
             </div>
           )
         )}

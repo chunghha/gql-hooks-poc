@@ -6,8 +6,9 @@ export const QUERY_COUNTRY_PROFILE = gql`
       name
       capital
       cioc
-      population
       flag
+      population
+      subregion
       timezones
     }
   }
